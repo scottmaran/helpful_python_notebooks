@@ -4,8 +4,6 @@ When a person thinks of sports analytics, the first thing that comes to mind is 
 
 ## Operating Systems
 
-*unfortunately this guide is tailored to Mac and Linux users. Windows users...sorry*
-
 A computer's operating system is what controls and manages your computer. When you open your laptop, you're meet with a nice GUI (graphical user interface) that is very intuitive to work with. You can see and click on all your folders and documents on the desktop and open them from there. But this is just exacctly what the acronym GUI stands for - an interface that makes it easier for the user to connect with the computer. If you want better control of your computing environment, you're going to need to get familiar with the command line.
 
 ### Command Line
@@ -24,9 +22,18 @@ Anything you can normally do on a computer you can do with the terminal. Open a 
 
 You can do much more with it though! You're data, tools, and code have to be stored somewhere on your computer and creating a clean workspace you're familiar with is vital.
 
-## Creating your Project Directory
+## Important Bash Commands
 
-Now that we have python installed, 
+The first and most important commands you learn are:
+'cd' - change directory
+'ls' - list directories
+
+Let's see what directories are in your 'Documents' folder (if you have one):
+```console
+cd ~/Documents
+ls
+```
+These two commands will help you navigate your computers file structure
 
 ## Setting up Your Python Environment
 
@@ -43,10 +50,12 @@ Now back to Python. We need to be able to install and work with different versio
 ```console 
 brew install pyenv
 ```
+Now there are just a few commands we have to run to get pyenv working properly. We'll discuss this more in a minute, but first we have to find out what 'language' your terminal (also known as a shell) is running. To do so, run
 
-### Understanding your shell language
-
-Bash, Zsh
+```console 
+echo $0
+```
+This should output either "-zsh" or "-bash", indicating ZShell or Bash respectively. 
 
 For Bash, run these commands in the terminal:
 ```console
@@ -76,9 +85,17 @@ pyenv global 3.7.13
 ```
 Now we're all set with a new up-to-date Python version
 
-### Virtual Environments
+### Quick aside: your shell language
 
-There's a lot of power in Python by itself, but a lot of developers have already created fast, highly-optimized packages for others to use. One can only get so far without using important packages like Numpy, Scipy, Pandas, and more in the data science world. As a person grows to use more and more of these packages though, they don't always play nicely with each other. So basically, you can think of a virtual environment as an isolated place where we can keep many packages together. We can have several virtual environments, with each one having specific versions of packages that we may need for a specific project.
+What's a shell? What language does it run? What does that even mean?
+
+Just like how there are many different coding languages besides Python, the terminal can read different types of languages. The most common are Bash and ZShell.
+
+We call it a "shell" because you can think of the terminal as a "shell" around the operating system of the computer, thought of as the "kernel". The name "shell" for a command line interpreter and the concept of making the shell a user program outside of the operating system kernel were introduced in Unix's precursor Multics.
+
+## Virtual Environments
+
+There's a lot of power in Python by itself, but developers have already created fast, highly-optimized packages for others to use. One can only get so far without using important packages like Numpy, Scipy, Pandas, and more in the data science world. As a person grows to use more and more of these packages though, they don't always play nicely with each other. So basically, you can think of a virtual environment as an isolated place where we can keep many packages together. We can have several virtual environments, with each one having specific versions of packages that we may need for a specific project.
 
 The most common (and arguably natural) way is to then store all of one's virtual environments in one place; i.e. under a folder titled virtualEnvs (or any other name). Do you remember how to create a directory?
 
@@ -97,7 +114,7 @@ source ~/virtualEnvs/firstEnv/bin/activate
 ```
 Now we're ready to install useful packages!
 
-### Jupyter Notebooks
+## Jupyter Notebooks
 
 So now that we've got Python installed, how can we actually code in it? The simplest way is to just run the command 'python' in the terminal and this will create an interactive shell for you to code in! In simpler terms, once you tell the computer 'python', the computer now knows to interpret everything you type as a Python command.
 
@@ -106,21 +123,70 @@ So now that we've got Python installed, how can we actually code in it? The simp
 For complex projects this is not practical. There are many different good code editors (like VSCode), but a good interactive IDE (integrated development environment) to start with is Jupyter Notebook. 
 
 ```console
-pip3 install notebook
+pip3 install jupyter
 ```
 To run it, just type 'jupyter notebook' to the console and create a new file (don't forget to activate your virtual environment!):
 
 <img width="1440" alt="SAL_5" src="https://user-images.githubusercontent.com/46616766/176983712-af3a68c1-10b2-4cfa-878f-5212079b9d31.png">
 
+## Creating your Project Directory
 
+But where are these files stored? As you write and save more and more files, it's useful to keep them organized in a nice structure. For that, we will create a specific directory (folder) to store our files in.
 
-
-## Important Bash Commands
-
-The first and most important commands you learn are 'cd' and 'ls'
-
+For now, we will create a new folder on your Desktop called firstProject. The 'mkdir' bash command does exactly that, it creates a new folder in your current working directory (the folder that you are currently in).
 
 ```console
-cd ~/Documents
+cd ~/Desktop
+mkdir firstProject
 ```
-With this
+
+When working with the jupyter notebook program, we can start it and then create a new 'notebook' (a special type of file with a .ipynb extension specific to the program). But what would are next steps be if we did not want to create a file through Jupyter Notebook? 
+
+We need to create a python file to write our python code. We do this by creating a regular text file with the extension .py . This tells the computer that this type of file holds python code. To create a text file in Bash, use the 'touch' command followed by the name of the file you want to create.
+
+```console
+cd firstProject
+touch firstPythonFile.py
+```
+
+We can edit this file using any text editor - Jupyter Notebook is an example of one! A text editor is just a program that let's you more easily write to a file (think of how you use Microsoft Word to write an essay). To run the file, we first tell the computer we want to use python and then the file name:
+
+```console
+python3 firstPythonFile.py
+```
+
+And that's how you run your first python file!
+
+### Example Exercises
+
+1) Create a new directory called passingProject (you can put it wherever you'd like; e.g. on your Desktop, in your Documents, etc)
+2) Download the nflfastR.csv from your email and move it to your new directory 
+   
+   *hint - you might find the command listed here https://algodaily.com/lessons/bash-commands-cheat-sheet1*
+   
+Ready to learn more about Python? A good introduction - https://docs.python.org/3/tutorial/introduction.html
+
+Python dictionaries - https://www.w3schools.com/python/python_dictionaries.asp
+
+Python zip function - https://www.programiz.com/python-programming/methods/built-in/zip
+
+3) A bunch of players have switched teams, and I want to find out which quarterback plays for the New York Giants. Given is a dictionary of players with their new teams as values (stored as their abbreviations). Print out who is the new quarterback of the Giants (NYG).
+
+```python 
+players = ['Brady', 'Murray', 'Mahomes', 'Allen', 'Tagovailoa']
+teams = ['NYJ', 'ARI', 'IND', 'NYG', 'PHI']
+new_dict = dict(zip(players,teams))
+```
+
+### Resources
+Guide to VIM - https://linuxfoundation.org/blog/classic-sysadmin-vim-101-a-beginners-guide-to-vim/
+
+Useful bash commands - https://www.educative.io/blog/bash-shell-command-cheat-sheet
+
+The Linux command line for beginners - https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+
+Venv documenation - https://docs.python.org/3/library/venv.html
+
+Jupyter notebook guide - https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
+
+Pandas: Useful python library used for (effectively) creating and manipulating tables of data - https://pandas.pydata.org/docs/user_guide/10min.html
