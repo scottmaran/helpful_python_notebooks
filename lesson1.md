@@ -1,4 +1,4 @@
-# Lesson 1: Familiarizing Yourself with your Computing Environment
+# Setting up your Python Environment
 
 When a person thinks of sports analytics, the first thing that comes to mind is statistics. And this is rightfully so. However, almost an equal part of the job is being able to statistics at scale, and computers are great for this. With computing becoming more powerful and useful across all domains, it is imperative that a sports analyst is comfortable on the computer. 
 
