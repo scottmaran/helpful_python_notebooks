@@ -1,6 +1,6 @@
 # Setting up your Python Environment
 
-When a person thinks of sports analytics, the first thing that comes to mind is statistics. And this is rightfully so. However, almost an equal part of the job is being able to statistics at scale, and computers are great for this. With computing becoming more powerful and useful across all domains, it is imperative that a sports analyst is comfortable on the computer. 
+<!-- When a person thinks of sports analytics, the first thing that comes to mind is statistics. And this is rightfully so. However, almost an equal part of the job is being able to statistics at scale, and computers are great for this. With computing becoming more powerful and useful across all domains, it is imperative that a sports analyst is comfortable on the computer.  -->
 
 ## Operating Systems
 
@@ -157,7 +157,7 @@ python3 firstPythonFile.py
 
 And that's how you run your first python file!
 
-### Example Exercises
+<!-- ### Example Exercises
 
 1) Create a new directory called passingProject (you can put it wherever you'd like; e.g. on your Desktop, in your Documents, etc)
 2) Download the nflfastR.csv from your email and move it to your new directory 
@@ -177,7 +177,7 @@ players = ['Brady', 'Murray', 'Mahomes', 'Allen', 'Tagovailoa']
 teams = ['NYJ', 'ARI', 'IND', 'NYG', 'PHI']
 new_dict = dict(zip(players,teams))
 ```
-
+ -->
 ### Resources
 Guide to VIM - https://linuxfoundation.org/blog/classic-sysadmin-vim-101-a-beginners-guide-to-vim/
 
