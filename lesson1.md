@@ -20,7 +20,7 @@ Anything you can normally do on a computer you can do with the terminal. Open a 
 
 <img width="691" alt="SAL1_3" src="https://user-images.githubusercontent.com/46616766/176979215-db0e6f62-2b78-40a3-a20d-3f2a0ab2d813.png">
 
-You can do much more with it though! You're data, tools, and code have to be stored somewhere on your computer and creating a clean workspace you're familiar with is vital.
+You can do much more with it though! Your data, tools, and code have to be stored somewhere on your computer, and the command line gives you the most direct control over it.
 
 ## Important Bash Commands
 
@@ -114,7 +114,7 @@ source ~/virtualEnvs/firstEnv/bin/activate
 ```
 Now we're ready to install useful packages!
 
-## Jupyter Notebooks
+##  Jupyter Notebooks
 
 So now that we've got Python installed, how can we actually code in it? The simplest way is to just run the command 'python' in the terminal and this will create an interactive shell for you to code in! In simpler terms, once you tell the computer 'python', the computer now knows to interpret everything you type as a Python command.
 
@@ -128,6 +128,13 @@ pip3 install jupyter
 To run it, just type 'jupyter notebook' to the console and create a new file (don't forget to activate your virtual environment!):
 
 <img width="1440" alt="SAL_5" src="https://user-images.githubusercontent.com/46616766/176983712-af3a68c1-10b2-4cfa-878f-5212079b9d31.png">
+
+#### VSCode
+
+VSCode is always incredibly useful (and is arguably the most popular choice). Here is a link to how to download it:
+https://code.visualstudio.com/docs/setup/mac
+and VSCode's starter guide:
+https://code.visualstudio.com/docs/introvideos/basics
 
 ## Creating your Project Directory
 
@@ -179,7 +186,8 @@ new_dict = dict(zip(players,teams))
 ```
  -->
 ### Resources
-Guide to VIM - https://linuxfoundation.org/blog/classic-sysadmin-vim-101-a-beginners-guide-to-vim/
+
+Getting started with VSCode - https://code.visualstudio.com/docs/introvideos/basics
 
 Useful bash commands - https://www.educative.io/blog/bash-shell-command-cheat-sheet
 
@@ -187,6 +195,9 @@ The Linux command line for beginners - https://ubuntu.com/tutorials/command-line
 
 Venv documenation - https://docs.python.org/3/library/venv.html
 
+Guide to VIM - https://linuxfoundation.org/blog/classic-sysadmin-vim-101-a-beginners-guide-to-vim/
+
 Jupyter notebook guide - https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html
 
 Pandas: Useful python library used for (effectively) creating and manipulating tables of data - https://pandas.pydata.org/docs/user_guide/10min.html
+
