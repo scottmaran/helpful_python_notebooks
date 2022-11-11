@@ -50,7 +50,7 @@ Now back to Python. We need to be able to install and work with different versio
 ```console 
 brew install pyenv
 ```
-Now there are just a few commands we have to run to get pyenv working properly. We'll discuss this more in a minute, but first we have to find out what 'language' your terminal (also known as a shell) is running. To do so, run
+Now there are just a few commands we have to run to get pyenv working properly. At a high-level what we're doing here is we're defining a variable PYENV_ROOT for your computer so it knows where this executable (the actual code that comprises pyenv) is installed. You don't need to know exactly what's going on here (the pyenv install guide has a good quick summary), but first we have to find out what 'language' your terminal (also known as a shell) is running. To do so, run
 
 ```console 
 echo $0
@@ -75,6 +75,13 @@ For the changes to take effect, run
 ```console
 exec "$SHELL"
 ```
+
+The pyenv documentation also recommends to install these Python build dependencies 
+
+```console
+brew install openssl readline sqlite3 xz zlib tcl-tk
+```
+
 Now we can install different python versions. For the purposes of this tutorial, we will install Python 3.7
 ```console
 pyenv install 3.7.13
@@ -113,6 +120,11 @@ As we may have many different virtual environments, we need to activate it to wo
 source ~/virtualEnvs/firstEnv/bin/activate
 ```
 Now we're ready to install useful packages!
+
+### What if you don't want to use virtual environments?
+
+You can, nothing is stopping you from installing all your packages globally. A lot of people don't actually use virtual environments for small, local projects. It is arguably simpler to not have to worry about activating and deactivating your virtual environment every time you want to code. If you just want to get coding as quick as possible, all that's left to do is install a code editor (a program where one can actually type code).
+However, in the future it does keep your global environment less cluttered and prevents package conflicts in the future.
 
 ##  Jupyter Notebooks
 
